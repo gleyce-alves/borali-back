@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div>
+        <img class="logo" src="./img/BORALI.png">
+
+        <nav class="h-menu">
+            <ul>
+                <li><a href="registrarComedoria.html">Sugerir comedoria</a></li>
+                <li><a href="home-buscar.html">Buscar</a></li>
+                <li><a href="login.html">Usuário</a></li>  
+            </ul>
+        </nav>
+
+        <input type="checkbox" id="check">
+
+        <label for="check">
+            <img src="./img/menu-mobile.png">
+        </label>
+        
+        <nav class="v-menu">
+            <ul>
+                <li><a href="home-buscar.html">HOME</a></li>
+                <li><a href="#">QUEM SOMOS</a></li>
+                <li><a href="registro.html">REGISTRE-SE</a></li>
+                <li><a href="login.html">ENTRAR</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <h1>Cadastro de Usuário</h1>
+    <form action="/regUser" method="post">
+        <input name="nome" id="nome" type="text" placeholder="Nome" required>
+        <br>
+        <input name="email" id="email" type="email" placeholder="Email" required>
+        <br>
+        <input name="senha" id="senha" type="password" placeholder="Senha"required>
+        <br>
+        <input name="confSenha" id="confSenha" type="password" placeholder="Confirmar Senha" required>
+        <div id="container-botao">
+            <button >Cadastrar</button>
+        </div>
+    </form>
+</body>
+</html>

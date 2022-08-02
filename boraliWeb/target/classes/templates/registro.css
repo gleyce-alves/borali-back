@@ -1,0 +1,286 @@
+:root {
+    --marrom-escuro: #9a5b3c;
+    --marrom-claro: #a56446;
+    --yellow: #F4E8AE;
+}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+text-align: justify;
+}
+
+
+.logo{
+    width: 130px;
+    
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/*Config do menu Horizontal*/
+.h-menu{
+    width: 98.7vw;
+    color:#555555
+}
+.h-menu ul{
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #9a5b3c;
+    overflow: auto;
+    border-radius: 10px;
+    color: #9a5b3c;
+    font-size: larger
+}
+
+.h-menu li{
+    display: inline;
+    float: right;
+    color:#555555
+}
+
+.h-menu li a{
+    display: block;
+    color: #f8f2d2;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+.h-menu li a:hover{ 
+    background-color: #9a5b3c;
+    transition: background .3s;
+    border-radius: 8px;
+
+}
+
+/* Config do menu vertical*/
+.v-menu{
+    max-width: 100%;
+    width: 600px;
+}
+.v-menu ul{
+    margin: 30px 9px;
+    padding: 0;
+    background-color: #9a5b3c;
+    border-radius: 8px;
+    
+
+}
+.v-menu li a{
+    display: block;
+    color: #f8f2d2;
+    padding: 10px 16px;
+    text-decoration: none;
+    background-image: url();
+}
+
+.v-menu li a:hover{
+    background-color: #9a5b3c;
+    border-radius: 8px;
+    color: #555555
+}
+
+.v-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.v-menu ul{
+    list-style: none;
+}
+
+img{
+    width: 40px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.v-menu{
+    width: 230px;
+    height: 50%;
+    left: -230px;
+    position: absolute;
+    transition: linear .3s;
+    
+}
+
+input[type="checkbox"]:checked ~ nav{
+    transform: translateX(230px);
+    
+}
+
+.v-menu ul{
+    top: 30px;
+    position: absolute;
+    width: 85%;
+    
+}
+
+ .v-menu a{ 
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+.v-menu a:hover{
+    
+    color: #555555;
+
+}
+
+label{
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+img{
+    width: 40px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.v-menu{
+    width: 230px;
+    height: 50%;
+    left: -230px;
+    position: absolute;
+    transition: linear .3s;
+    
+}
+
+input[type="checkbox"]:checked ~ nav{
+    transform: translateX(230px);
+    
+}
+
+.v-menu ul{
+    top: 30px;
+    position: absolute;
+    width: 85%;
+    
+}
+
+ .v-menu a{ 
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+.v-menu a:hover{
+    
+    color: rgb(8, 180, 16);
+    font-weight: bold;
+
+}
+
+label{
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+body {
+    background-color: #f8f2d2;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 33pt;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: var(--marrom-escuro);
+}
+
+input {
+    padding-left: 5pt;
+    font-size: 14pt;
+    height: 32pt;
+    margin-top: 28pt;
+    margin-left: 20pt;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 0 0; /*Tira a borda ao clicar*/
+    outline: 0;         /*Tira a borda ao clicar*/
+    background-color: var(--yellow);
+}
+
+input::placeholder {
+    color: var(--marrom-escuro);
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+    /*Tira a rolagem lateral*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#nome {
+    width: 925pt;
+    margin-top: 0.1pt;
+}
+
+#rg {
+    width: 455pt;
+}
+
+#cpf {
+    width: 455pt;
+    margin-left: 10pt;
+}
+
+#endereco {
+    width: 925pt;
+}
+
+#contato {
+    width: 455pt;
+}
+
+#cep {
+    width: 455pt;
+    margin-left: 10pt;
+}
+
+#email {
+    width: 455pt;
+}
+
+#senha{
+    width: 455pt;
+    margin-left: 10pt;
+}
+
+#container-botao {
+    margin-top: 30pt;
+    text-align: center;
+}
+
+button {
+    font-size: 15pt;
+    width: 110pt;
+    height: 30pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--marrom-escuro);
+    color: var(--yellow);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulário</title>
+<link rel="stylesheet" href="home.css">
+<style>
+	body{
+	font-family: arial;
+		flex-direction: column;
+		margin: 0px;
+		padding: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	h1{
+		text-align: center;
+	}
+	form{
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid black;
+		background-color: lightgrey;
+		padding: 20px;
+	}
+	input{
+		width: 300px;
+		border: 1px solid grey;
+		border-radius: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+	input:focus{
+		border: none;
+	}
+	.button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	button{
+		padding: 10px;
+		border: 1px solid grey;
+		background-color: white;
+		border-radius: 5px;
+	}
+</style>
+</head>
+<body>
+	<h1>Formulario Teste</h1>
+	<form method="post" class="formulario" action="/regUser">
+		Nome: <input name="nome" type="text" required>
+		<div>
+		</div>
+		Email: <input name="email" type="email" required>
+		Senha: <input name="senha" type="password" required>
+		Confirme senha: <input name="confSenha" type="password" required>
+		<div class="button">
+			<button type="submit">Cadastrar</button>
+		</div>
+	</form>
+</body>
+</html>
