@@ -1,4 +1,4 @@
-package com.borali.controllers;
+package com.borali.Application;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
