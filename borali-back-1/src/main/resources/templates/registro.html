@@ -39,7 +39,7 @@
     <h1>Cadastro de Usuário</h1>
 
     <div class="container">
-        <form id="form" action="/registrando" method="post">
+        <form id="form" action="salvarRegistro" th:object="${saveregistro}" method="post">
             <input name="nome" id="nome" type="text" placeholder="Nome" required>
             <br>
             <div class="div">
@@ -47,7 +47,7 @@
                 <input name="cpf" id="cpf" type="number" placeholder="CPF" required>
             </div>
             <br>
-            <input name="endereco" id="endereco" type="text" placeholder="Endereço" required>
+            	<input name="endereco" id="endereco" type="text" placeholder="Endereço" required>
             <br>
             <div class="div">
                 <input name="contato" id="contato" type="number" placeholder="Contato" required>

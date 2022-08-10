@@ -1,9 +1,17 @@
-package com.borali.Application;
+package com.borali;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.borali.Usuario.UsuarioDAO;
+import com.borali.model.SaveRegistro;
 
 @org.springframework.stereotype.Controller
 public class Controller {
+	
+	@Autowired
+	private UsuarioDAO usuarioDAO;
 	
 	// AQUI REDIRECIONAMOS TODAS AS TELAS
 	
@@ -45,9 +53,13 @@ public class Controller {
 	}
 	
 	@GetMapping("/registro")
-	public String registro() {
+	public String registro(SaveRegistro saveregistro) {
 		return "registro";
 	}
 	
-	
+	@PostMapping("salvarRegistro")
+	public String salvarRegistro (SaveRegistro saveregistro) {
+		this.usuarioDAO.save(saveregistro);
+		return "/registro";
+	}
 }
