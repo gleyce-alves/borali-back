@@ -3,17 +3,18 @@ package com.borali.Usuario;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
 
-@Controller
+@AllArgsConstructor
+@RestController
+@RequestMapping("/Usuario")
 public class UsuarioController {
 	
 	
-	private final UsuarioDAO usuarioDAO;
-	public UsuarioController (UsuarioDAO usuarioDAO) {
-		this.usuarioDAO = usuarioDAO;
-	}
-	
+	private UsuarioDAO usuarioDAO;
 	
 	@PostMapping("/registrando")
 	public String cadastroUsuario(EntidadeUsuario usuario) {
