@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home-buscar.css">
+    <title>BUSCA BORALI?!</title>
+</head>
+
+<body>
+    <div class="menus">
+        <div class="menu-horizontal">
+            <img class="logo" src="/img/BORALI.png">
+            <nav class="h-menu">
+                <ul>
+                    <li><a href="/registroComedoria">Sugerir comedoria</a></li>
+                    <li><a href="/home">Buscar</a></li>
+                    <li><a href="/home">Home</a></li>  
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menu-vertical">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <img src="img/menu-mobile.png">
+            </label>
+            <nav class="v-menu">
+                <ul>
+                    <li><a href="/{nome}">USUÁRIO</a></li>
+                    <li><a href="/quemSomos">QUEM SOMOS</a></li>
+                    <li><form method="get" action="/login" th:if="${logadoDeslogado == false}">
+                	<button type="submit">Entrar</button></form></li>
+                    <li><form method="post" action="logout" th:if="${logadoDeslogado == true}">
+                	<span th:text="${usuarioLogado.nome}"></span>
+                	<button type="submit">Sair</button></form></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="topicos">
+            <div>
+                <h2 id="principais">Principais:</h2>
+            </div>
+            <div class="bloco">
+                <div class="espaco">
+                    <img id="img" src="./img/Tapioqueiras.jpeg">
+                    <h3 id="texto">Tapioquerias</h3>
+                </div>
+                
+                <div class="espaco">
+                    <img id="img" src="./img/Caldinhos.jpeg">
+                    <h3 id="texto">Caldinhos</h3>
+                </div>
+                
+                <div class="espaco">
+                    <img id="img" src="./img/Acarajes.jpeg">
+                    <h3 id="texto">Acarajés</h3>
+                </div>
+                
+                <div class="espaco">
+                    <img id="img" src="./img/Pastel.jpeg">
+                    <h3 id="texto">Pastéis</h3>
+                </div>
+                
+                <div class="espaco">
+                    <img id="img" src="./img/HotDog.jpeg">
+                    <h3 id="texto">Hot Dog</h3>
+                </div>
+        
+                <div class="espaco">
+                    <img id="img" src="./img/Lanches.jpeg">
+                    <h3 id="texto">Lanches</h3>
+                </div> 
+            </div>
+        </div>
+    
+        <div class="sugestoes">
+            <div class="barraquinha">
+                <img id="img1" src="./img/Gildo-Lanches.jpeg">
+                <h3 id="txt">Gildo Lanches</h3>
+            </div>
+            
+            <div class="barraquinha">
+                <img id="img1" src="./img/Elias-do-doce-japones.jpeg">
+                <h3 id="txt">Elias do doce Japônes</h3>
+            </div>
+    
+            <div class="barraquinha">
+                <img id="img1" src="./img/Tapioca-da-menininha.jpeg">
+                <h3 id="txt">Tapioca da Menininha</h3>
+            </div>
+         </div>
+    </div>
+
+</body>
+</html>
+
