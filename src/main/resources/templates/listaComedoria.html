@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" xml:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Lista de Comedorias</title>
@@ -32,14 +32,20 @@
     </div>
 </div>
     <div>
-        <table class="lojas_plataforma">
-            <tr th:each = "loja : ${listaComedoria}">
-                <th th:text="${loja.nome}"></th>
-                <td th:text = "${loja.contato}"></td>
-                <td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-                                                      aria-hidden="true"></i></a></td>
-
+        <table>
+            <thead>
+            <tr>
+                <th> Nome </th>
+                <th> Contato </th>
             </tr>
+            </thead>
+            <tbody>
+            <tr th:each="lista : ${listaComedoria}">
+                <td th:value="${lista.id}"></td>
+                <td><span th:value="${lista.nome}" th:text="${lista.nome}"> Nome </span></td>
+                <td><span th:value="${lista.contato}" th:text="${lista.contato}"> Contato </span></td>
+            </tr>
+            </tbody>
         </table>
     </div>
 

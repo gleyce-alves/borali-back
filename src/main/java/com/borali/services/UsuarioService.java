@@ -1,6 +1,8 @@
 package com.borali.services;
 
+import com.borali.entities.ComedoriaEntity;
 import com.borali.entities.UsuarioEntity;
+import com.borali.repositories.ComedoriaDAO;
 import com.borali.repositories.UsuarioDAO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -29,4 +31,6 @@ public class UsuarioService {
         return this.repository.findByNomeAndSenha(nome, senha);
     }
 
+
 }
+
