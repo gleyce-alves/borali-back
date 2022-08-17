@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" xml:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Comedorias</title>
+    <link rel="stylesheet" href="perfilComedoria.css">
+</head>
+<body>
+<div class="menus">
+    <div class="menu-horizontal">
+        <img class="logo" src="./img/BORALI.png">
+        <nav class="h-menu">
+            <ul>
+                <li><a href="/registroComedoria">Sugerir comedoria</a></li>
+                <li><a href="/home">Buscar</a></li>
+                <li><a href="/home">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="menu-vertical">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="./img/menu-mobile.png">
+        </label>
+        <nav class="v-menu">
+            <ul>
+                <li><a href="/perfilUsuario">USUÁRIO</a></li>
+                <li><a href="/quemSomos">QUEM SOMOS</a></li>
+                <li><a href="/login">ENTRAR</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <div>
+        <table class="lojas_plataforma">
+            <tr th:each = "loja : ${listaComedoria}">
+                <th th:text="${loja.nome}"></th>
+                <td th:text = "${loja.contato}"></td>
+                <td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+                                                      aria-hidden="true"></i></a></td>
+
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

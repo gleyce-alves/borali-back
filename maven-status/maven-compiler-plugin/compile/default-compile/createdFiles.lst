@@ -1,0 +1,16 @@
+com\borali\DAO\UsuarioDAO.class
+com\borali\entity\UsuarioEntity.class
+com\borali\model\UsuarioModel.class
+com\borali\controller\LoginController.class
+com\borali\BoraliBackApplication.class
+com\borali\DAO\ProdutoDAO.class
+com\borali\DAO\ComedoriaDAO.class
+com\borali\controller\PerfilUsuario.class
+com\borali\model\ComedoriaModel.class
+com\borali\entity\ComedoriaEntity.class
+com\borali\Controller.class
+com\borali\LogarDeslogar.class
+com\borali\model\Produto.class
+com\borali\controller\UsuarioController.class
+com\borali\entity\CardapioEntity.class
+com\borali\DAO\CardapioDAO.class
