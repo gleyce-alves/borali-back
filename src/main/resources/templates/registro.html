@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br" xml:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    
+    <div class="menus">
+        <div class="menu-horizontal">
+            <img class="logo" src="./img/BORALI.png">
+            <nav class="h-menu">
+                <ul>
+                    <li><a href="/registroComedoria">Sugerir comedoriaModel</a></li>
+                    <li><a href="/home">Buscar</a></li>
+                    <li><a href="/home">Home</a></li>  
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menu-vertical">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <img src="./img/menu-mobile.png">
+            </label>
+            <nav class="v-menu">
+                <ul>
+                    <li><a href="/perfilUsuario">USUÁRIO</a></li>
+                    <li><a href="/quemSomos">QUEM SOMOS</a></li>
+                    <li><a href="/login">ENTRAR</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <h1>Cadastro de Usuário</h1>
+
+    <div class="container">
+        <form id="form" action="/registrando" method="post">
+        	<div class="avisos" th:text="${avisoNome}" th:if="${avisoNome != null}">
+        	</div>
+            <input name="nome" id="nome" type="text" placeholder="Nome" maxlength="35" required>
+            <br>
+            	<div class="avisos" th:text="${avisoCpf}" th:if="${avisoCpf != null}">
+        		</div>
+                <input name="cpf" id="cpf" type="number" placeholder="CPF" maxlength="11" required>
+            <br>
+            	<div class="avisos" th:text="${avisoContato}" th:if="${avisoContato != null}">
+        		</div>
+                <input name="contato" id="contato" type="tel" placeholder="Contato" maxlength="11" required>
+            <br>
+            	<div class="avisos" th:text="${avisoEmail}" th:if="${avisoEmail != null}">
+        		</div>
+            	<input name="email" id="email" type="email" placeholder="Email" maxlength="35" required>
+            <br>
+                <input name="senha" id="senha" type="password" placeholder="Senha" maxlength="35" required>
+            <div class="span">
+                <span id="span1"></span>
+                <span id="span2"></span>
+            </div>
+            <br>
+            <div id="container-botao">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        const form = document.getElementById('form');
+        const senha = document.getElementById('senha');
+        const confirmarSenha = document.getElementById('confirmarSenha');
+        const span1 = document.getElementyById('span1');
+        const span2 = document.getElementById('span2');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            checkInputs()
+        })
+
+        function checkInputs(){
+
+            const senhaValue = senha.value.trim()
+            const confirmarSenhaValue = confirmarSenha.value.trim()
+
+            if(senhaValue.length < 8){
+                console.log("Senha muito curta")
+            }else if(senhaValue == confirmarSenhaValue){
+                console.log("senhas iguais")
+            }else{
+                console.log("senhas diferentes")
+            }
+        }
+
+    </script>
+
+</body>
+</html>

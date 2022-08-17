@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: #9a5b3c;
+    background-color: #f8f2d2;
+}
+/* config dos menus */
+.menus{
+    width: 100vw;
+    box-sizing: border-box;
+    background: none;
+    height: 150px;
+}
+.menus a:hover{
+    color: white;
+}
+
+.menu-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #9a5b3c;
+}
+
+.menu-horizontal img{
+    width: 90px;
+    margin-left: 10px; 
+}
+/*Config do menu Horizontal*/
+.h-menu{
+    width: 100vw;
+    color:#555555;
+  }
+  
+  .h-menu ul{
+    padding: 20px;
+    background-color: #9a5b3c;
+    overflow: auto;
+    color: #9a5b3c;
+    font-size: larger;
+  }
+  
+  .h-menu li{
+    display: inline;
+    float: right;
+    color:#9a5b3c;
+  }
+  
+  .h-menu li a{
+    display: block;
+    color: #f8f2d2;
+    padding: 16px 16px;
+    text-decoration: none;
+  }
+  
+  .h-menu li a:hover{ 
+    color: white;
+    background-color: #9a5b3c;
+    transition: background .3s;
+    border-radius: 8px;
+  }
+  /* Config do menu vertical*/
+.v-menu{
+    z-index: 9;
+    max-width: 100%;
+    width: 600px;
+  }
+  .v-menu ul{
+    margin: 35px 5px;
+    padding: 10px;
+    background-color: #9a5b3c;
+    border-radius: 5px;
+  }
+  .v-menu li a{
+    display: block;
+    color: #f8f2d2;
+    padding: 10px 16px;
+    text-decoration: none;
+    background-image: url();
+  }
+  
+  .v-menu li a:hover{
+    background-color: #9a5b3c;
+    border-radius: 8px;
+  }
+  
+  .v-menu a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .v-menu ul{
+    list-style: none;
+  }
+  
+  img{
+    width: 50px;
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+  .v-menu{
+    width: 230px;
+    height: 50%;
+    left: -230px;
+    position: absolute;
+    transition: linear .3s;
+  }
+  
+  input[type="checkbox"]:checked ~ nav{
+    transform: translateX(230px);
+    
+  }
+  
+  .v-menu ul{
+    top: 30px;
+    position: absolute;
+    width: 85%;
+  }
+  
+  .v-menu a{ 
+    display: block;
+    padding: 20px 5px;
+    color: white;
+  }
+  
+  .v-menu a:hover{
+    color: white;
+  }
+  
+  label{
+    padding: 15px;
+    position: absolute;
+    z-index: 10;
+  }
+
+/* configs do container */
+
+h1{
+    font-size: 33pt;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.container{
+    font-size: 14pt;
+    width: 100vw;
+    height: 67.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    font-size: 14pt;
+    justify-content: space-evenly;
+    padding: 40px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input{
+    width: 97.0%;
+    font-size: 14pt;
+    outline: none;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid #9a5b3c;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+input::placeholder{
+    color: #9a5b3c;
+}
+
+input:hover{
+    opacity: 80%;
+}
+
+.div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div input{
+    width: 46%;
+}
+
+.span{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+span{
+  max-width: 50%;
+  width: 50%;
+}
+.button{
+	text-decoration: none;
+    font-size: 14pt;
+    color: white;
+    background-color: #9a5b3c;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    opacity: 80%;
+}
