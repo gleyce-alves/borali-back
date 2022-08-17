@@ -139,3 +139,28 @@ body{
     position: absolute;
     z-index: 10;
   }
+
+th{
+    margin-bottom: 20px;
+}
+
+td{
+    margin: 10px;
+  }
+
+  table{
+    min-height: 100px;
+
+  }
+  .tabela{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span{
+    padding: 10px;
+    margin: 10px;
+  }
+
+

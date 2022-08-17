@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Comedorias</title>
-    <link rel="stylesheet" href="perfilComedoria.css">
+    <link rel="stylesheet" href="listaComedoria.css">
 </head>
 <body>
 <div class="menus">
@@ -31,19 +31,20 @@
         </nav>
     </div>
 </div>
-    <div>
+    <div class="tabela">
         <table>
             <thead>
             <tr>
                 <th> Nome </th>
-                <th> Contato </th>
+                <th> Endereço </th>
+                <th> Instagram </th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="lista : ${listaComedoria}">
-                <td th:value="${lista.id}"></td>
-                <td><span th:value="${lista.nome}" th:text="${lista.nome}"> Nome </span></td>
-                <td><span th:value="${lista.contato}" th:text="${lista.contato}"> Contato </span></td>
+                <td><span th:value="${lista.nome}" th:text="${lista.nome}"></span></td>
+                <td><span th:value="${lista.endereco}" th:text="${lista.endereco}"></span></td>
+                <td><span th:value="${lista.instagram}" th:text="${lista.instagram}"></span></td>
             </tr>
             </tbody>
         </table>

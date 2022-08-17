@@ -16,6 +16,7 @@ public class ComedoriaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idComedoria;
     private String nome;
-    private Integer contato;
+    private String endereco;
+    private String instagram;
 
 }
